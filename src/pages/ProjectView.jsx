@@ -44,8 +44,15 @@ const ProjectView = () => {
     getProject();
   }, [id]);
 
-const descriptionList = (description || "").split(". ");
-const technologiesList = (technologies || "").split(", ");
+const descriptionList =
+  typeof description === "string" && description.length > 0
+    ? description.split(". ")
+    : [];
+
+const technologiesList =
+  typeof technologies === "string" && technologies.length > 0
+    ? technologies.split(", ")
+    : [];
 
   const navigateTo = useNavigate();
   const handleReturnToPortfolio = () => {
