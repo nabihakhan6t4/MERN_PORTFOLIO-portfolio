@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <HashRouter basename="/MERN_PORTFOLIO-portfolio">
+      <HashRouter >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={<ProjectView />} />
